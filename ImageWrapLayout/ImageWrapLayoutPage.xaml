@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ImageWrapLayout"
+             x:Class="ImageWrapLayout.ImageWrapLayoutPage"
+             BackgroundColor="#FFF">
+   <ScrollView>
+        <StackLayout Margin="20,20,20,20">
+            <Grid BackgroundColor="#6d6d6d" ColumnSpacing="1" RowSpacing="1"
+                  Padding="1" x:Name="DynamicGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.8*"/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="Gray"/>
+                <Label Grid.Row="0" Grid.Column="0" Text="項目A" TextColor="#FFF"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                <local:WrapLayout Grid.Row="0" Grid.Column="1"
+                                  BackgroundColor="#FFF"
+                                  Padding="5">
+                    <Button Text="111111"/>
+                    <Button Text="222222"/>
+                    <Button Text="333333"/>
+                    <Button Text="444444"/>
+                    <Button Text="555555"/>
+                    <Button Text="666666"/>
+                    <Button Text="777777"/>
+                    <Button Text="888888"/>
+                    <Button Text="999999"/>
+                </local:WrapLayout>
+
+                <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="Gray"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="項目B" TextColor="#FFF"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                <local:WrapLayout Grid.Row="1" Grid.Column="1"
+                                  BackgroundColor="#FFF"
+                                  Padding="5">
+                    <Button Text="111111"/>
+                    <Button Text="222222"/>
+                    <Button Text="333333"/>
+                    <Button Text="444444"/>
+                    <Button Text="555555"/>
+                    <Button Text="666666"/>
+                    <Button Text="777777"/>
+                    <Button Text="888888"/>
+                    <Button Text="999999"/>
+                </local:WrapLayout>
+
+                <BoxView Grid.Row="2" Grid.Column="0" BackgroundColor="Gray"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="項目C" TextColor="#FFF"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                <local:WrapLayout Grid.Row="2" Grid.Column="1"
+                                  BackgroundColor="#FFF"
+                                  Padding="5">
+                    <Button Text="111111"/>
+                    <Button Text="222222"/>
+                    <Button Text="333333"/>
+                    <Button Text="444444"/>
+                    <Button Text="555555"/>
+                    <Button Text="666666"/>
+                    <Button Text="777777"/>
+                    <Button Text="888888"/>
+                    <Button Text="999999"/>
+                </local:WrapLayout>
+            </Grid>
+            <Label Text="テーブル下部のラベル1"/>
+            <Label Text="テーブル下部のラベル2"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
